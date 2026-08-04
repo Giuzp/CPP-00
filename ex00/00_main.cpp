@@ -6,26 +6,26 @@
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:57:06 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/04 11:57:11 by dcresce          ###   ########.ch       */
+/*   Updated: 2026/08/04 13:51:22 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <algorithm>
-# include <string>
-# include <iostream>
-
-using namespace std;
+#include <string>
+#include <iostream>
+#include <cctype>
 
 int	main(int argc, char **argv) {
 	if (argc == 1) {
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
 	for (int i = 1; i < argc; i++) {
-		string str = argv[i];
-		transform(str.begin(), str.end(), str.begin(), ::toupper);
-		cout << str;
+		std::string str = argv[i];
+		for (size_t j = 0; j < str.length(); ++j) {
+			str[j] = std::toupper(str[j]);
+		}
+		std::cout << str;
 	}
-	cout << '\n';
+	std::cout << std::endl;
 	return (0);
 }
