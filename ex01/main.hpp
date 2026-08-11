@@ -5,9 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 14:28:37 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/04 14:28:37 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 11:20:05 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 11:21:06 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef MAIN_HPP
+# define MAIN_HPP
+# include <string>
+# include <iostream>
 
+#endif
