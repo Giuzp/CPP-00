@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 21:11:45 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 21:12:11 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 22:34:05 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 22:34:05 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,8 @@ void	PhoneBook::NewContact(std::string first, std::string last, std::string nick
 		ContactCount = 0;
 	this->contact[ContactCount] = Contact(first, last, nickname, number, secret);
 	ContactCount++;
+}
+
+Contact	PhoneBook::GetContact(int index) {
+	return this->contact[index];
 }
