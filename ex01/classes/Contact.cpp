@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 11:46:38 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 11:47:31 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 14:19:22 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 14:19:34 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 //constructor
-Contact::Contact(std::string first, std::string last, std::string number, std::string secret) :
-	first(first), last(last), number(number), secret(secret) {}
+Contact::Contact(std::string first, std::string last, std::string nickname, std::string number, std::string secret) :
+	first(first), last(last), nickname(nickname), number(number), secret(secret) {}
 
 //getters
 std::string Contact::GetFirst() {
@@ -22,6 +22,9 @@ std::string Contact::GetFirst() {
 }
 std::string Contact::GetLast() {
 	return this->last;
+}
+std::string Contact::GetNickname() {
+	return this->nickname;
 }
 std::string Contact::GetNumber() {
 	return this->number;
