@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 11:20:05 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 11:21:06 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 14:29:35 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 14:29:50 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 # define MAIN_HPP
 # include <string>
 # include <iostream>
+# include <iomanip>
+# include "Contact.hpp"
+# include "PhoneBook.hpp"
 
 #endif
