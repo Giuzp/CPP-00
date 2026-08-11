@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 14:19:12 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 14:19:15 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 21:25:02 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 21:25:02 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "main.hpp"
+
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
-# include "../main.hpp"
 
 class Contact {
 	private:
@@ -23,14 +24,14 @@ class Contact {
 		std::string secret;		//contact darkest secret
 	
 	public:
-		Contact() = default;
+		Contact();
 		Contact(std::string first, std::string last, std::string nickname, std::string number, std::string secret);
 		std::string GetFirst();
 		std::string GetLast();
 		std::string GetNickname();
 		std::string GetNumber();
 		std::string GetSecret();
-		~Contact() = default;
+		~Contact();
 };
 
 #endif

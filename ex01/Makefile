@@ -6,7 +6,7 @@
 #    By: dcresce <dcresce@student.42lausanne.c    	+#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 16:33:55 by dcresce           #+#    #+#              #
-#    Updated: 2026/08/04 14:26:17 by dcresce          ###   ########.fr        #
+#    Updated: 2026/08/11 21:18:56 by dcresce          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,7 @@ RESET	= \033[0m
 #Standard
 
 NAME		= phonebook
-INC_DIR		= ./
-SRCS_DIR 	= ./
+INC_DIRS	= ./ classes/
 OBJS_DIR 	= obj/
 CC 			= c++
 RM 			= rm -f
@@ -28,17 +27,17 @@ CFLAGS 		= -Wall -Wextra -Werror -std=c++98 -g
 
 #Sources
 
-MAIN = main
+SRC_FILES	= main \
+				classes/Contact \
+				classes/PhoneBook
 
-SRC_FILES += $(MAIN)
-
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRC_FILES)))
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
+SRCS		= $(addsuffix .cpp, $(SRC_FILES))
+OBJS		= $(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 ###
 
 OBJSF 		= .cache_exists
-INCLUDES 	= -I$(INC_DIR)
+INCLUDES 	= $(addprefix -I, $(INC_DIRS))
 
 all: ${NAME}
 
@@ -50,7 +49,8 @@ $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo -e "$(GREEN)✓ Build OK: $(NAME)$(RESET)"
 
-$(OBJS_DIR)%.o : $(SRCS_DIR)%.cpp | $(OBJSF)
+$(OBJS_DIR)%.o : %.cpp | $(OBJSF)
+	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OBJSF):

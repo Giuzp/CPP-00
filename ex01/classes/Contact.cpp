@@ -5,16 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 14:19:22 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 14:19:34 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 21:12:22 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 21:12:37 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 //constructor
+Contact::Contact() {}
 Contact::Contact(std::string first, std::string last, std::string nickname, std::string number, std::string secret) :
 	first(first), last(last), nickname(nickname), number(number), secret(secret) {}
+
+//destructor
+Contact::~Contact() {}
 
 //getters
 std::string Contact::GetFirst() {
