@@ -6,7 +6,7 @@
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 13:38:22 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 13:38:22 by dcresce          ###   ########.ch       */
+/*   Updated: 2026/08/11 14:10:47 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Contact {
 		std::string secret;		//contact darkest secret
 	
 	public:
+		Contact() = default;
 		Contact(std::string first, std::string last, std::string number, std::string secret);
 		std::string GetFirst();
 		std::string GetLast();
