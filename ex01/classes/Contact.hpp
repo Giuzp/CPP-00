@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 11:43:29 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 11:45:59 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/11 13:38:22 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/11 13:38:22 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Contact {
 		std::string GetLast();
 		std::string GetNumber();
 		std::string GetSecret();
+		~Contact() = default;
 };
 
 #endif
