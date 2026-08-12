@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 22:34:38 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 22:34:38 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/12 21:17:06 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/12 21:17:32 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,18 @@ int	main(void) {
 		//get the input
 		std::cout << "> "; getline(std::cin, cmd);
 		//add new contact
-		if (cmd == "print")
-			PrintContacts(phonebook);
 		if (cmd == "ADD")
 			AddContact(&phonebook);
+		//search the phonebook
+		if (cmd == "SEARCH")
+			phonebook.Search();
 		//leave the program
 		if (cmd == "EXIT")
 			break;
+
+		//====== TO DELETE LATER ========
+		if (cmd == "print")
+			PrintContacts(phonebook);
 	}
 	return 0;
 }

@@ -5,15 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/11 22:34:27 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/11 22:34:27 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/12 21:24:05 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/12 21:27:01 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
-
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
+# include <string>
+# include <iomanip>
+# include <iostream>
+# include "Contact.hpp"
 
 class PhoneBook {
 	private:
@@ -24,6 +27,7 @@ class PhoneBook {
 		PhoneBook();
 		Contact	GetContact(int index);
 		void	NewContact(std::string first, std::string last, std::string nickname, std::string number, std::string secret);
+		void	Search();
 		~PhoneBook();
 };
 
