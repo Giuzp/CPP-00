@@ -6,7 +6,7 @@
 #    By: dcresce <dcresce@student.42lausanne.c    	+#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 16:33:55 by dcresce           #+#    #+#              #
-#    Updated: 2026/08/04 11:33:30 by dcresce          ###   ########.fr        #
+#    Updated: 2026/08/12 20:53:57 by dcresce          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CFLAGS 		= -Wall -Wextra -Werror -std=c++98 -g
 
 #Sources
 
-MAIN = 00_main
+MAIN = megaphone.cpp
 
 SRC_FILES += $(MAIN)
 
