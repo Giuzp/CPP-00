@@ -6,7 +6,7 @@
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 22:10:38 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/12 22:21:02 by dcresce          ###   ########.ch       */
+/*   Updated: 2026/08/12 22:22:37 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	PhoneBook::Search()
 		if (!IsOnlyDigits(input))
 			std::cout << "Index can only be numerical" << std::endl;
 		else if (std::stoi(input) >= this->ContactCount)
-			std::cout << "Index out-of-scope" << std::endl;
+			std::cout << "Index out-of-range" << std::endl;
 		else
 			break;
 	}
@@ -59,7 +59,7 @@ void	PhoneBook::Search()
 	int index = std::stoi(input);
 	
 	//================ Add contact display ===================
-	 
+
 }
 
 void	FormattedPrint(std::string text) {
