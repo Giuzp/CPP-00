@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 13:39:26 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:39:26 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:56:01 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:56:01 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <iomanip>
 # include <iostream>
 # include <sstream>
+# include <cstdio>
 # include "Contact.hpp"
 
 class PhoneBook {

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 13:39:58 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:40:03 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:55:10 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:55:26 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ void	PhoneBook::Search()
 	std::string	input;
 	int index;
 	while (true) {
-		std::cout << "Choose index > "; getline(std::cin, input);
+		std::cout << "Choose index > ";
+		if (!getline(std::cin, input)) {
+			std::cin.clear();
+			std::clearerr(stdin);
+			std::cout << std::endl;
+		}
 		//display contact or error message for out-of-scope index
 		if (!IsOnlyDigits(input))
 			std::cout << "Index can only be numerical" << std::endl;
