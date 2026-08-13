@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 11:33:26 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:39:06 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:39:58 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:40:03 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	PhoneBook::Search()
 				break;
 		}
 	}
-	//================ Add contact display ===================
+	//Display chosen contact
 	std::cout << this->contact[index].GetFirst() << std::endl;
 	std::cout << this->contact[index].GetLast() << std::endl;
 	std::cout << this->contact[index].GetNickname() << std::endl;
