@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 13:21:10 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:27:58 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:39:16 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:39:20 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,6 @@
 
 void	AddContact(PhoneBook *pb);
 bool	CheckNumber(const std::string &str);
-
-void	PrintContacts(PhoneBook pb) {
-	for (int i = 0; i < 8; i++) {
-		Contact guy = pb.GetContact(i);
-		std::cout << "Contact " << i << std::endl;
-		std::cout << guy.GetFirst() << " " << guy.GetLast() << " " << guy.GetNickname() << " ";
-		std::cout << guy.GetNumber() << " " << guy.GetSecret() << std::endl << std::endl;
-	}
-}
 
 int	main(void) {
 	PhoneBook	phonebook = PhoneBook();
@@ -41,10 +32,6 @@ int	main(void) {
 		//leave the program
 		if (cmd == "EXIT")
 			break;
-
-		//====== TO DELETE LATER ========
-		if (cmd == "print")
-			PrintContacts(phonebook);
 	}
 	return 0;
 }

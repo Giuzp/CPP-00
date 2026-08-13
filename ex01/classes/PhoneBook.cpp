@@ -6,7 +6,7 @@
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/13 11:33:26 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:34:19 by dcresce          ###   ########.ch       */
+/*   Updated: 2026/08/13 13:39:06 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,4 @@ void	FormattedPrint(std::string text) {
 
 bool	IsOnlyDigits(const std::string &str) {
 	return (!str.empty() && str.find_first_not_of("0123456789") == std::string::npos);
-}
-
-//====== TO DELETE LATER ========
-Contact	PhoneBook::GetContact(int index) {
-	return this->contact[index];
 }

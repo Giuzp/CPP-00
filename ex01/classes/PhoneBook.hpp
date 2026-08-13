@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 11:33:15 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 11:33:15 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:39:26 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:39:26 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class PhoneBook {
 	
 	public:
 		PhoneBook();
-		Contact	GetContact(int index);
 		void	NewContact(std::string first, std::string last, std::string nickname, std::string number, std::string secret);
 		void	Search();
 		~PhoneBook();
