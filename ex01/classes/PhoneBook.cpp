@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/13 13:55:10 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 13:55:26 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 14:09:24 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 14:09:24 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	PhoneBook::Search()
 		else {
 			std::stringstream ss(input);
 			ss >> index;
-			if (index >= this->ContactCount)
+			if (index >= this->NbOfContacts)
 				std::cout << "Index out-of-range" << std::endl;
 			else
 				break;
