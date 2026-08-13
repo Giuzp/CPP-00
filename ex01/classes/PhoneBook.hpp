@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/12 21:24:05 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/12 21:27:01 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 11:33:15 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 11:33:15 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 # include <string>
 # include <iomanip>
 # include <iostream>
+# include <sstream>
 # include "Contact.hpp"
 
 class PhoneBook {
 	private:
 		Contact contact[8];		//list of contacts
 		int		ContactCount;	//index for contacts
+		int		NbOfContacts;	//Number of contacts in the phonebook
 	
 	public:
 		PhoneBook();
