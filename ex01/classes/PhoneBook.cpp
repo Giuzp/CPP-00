@@ -6,7 +6,7 @@
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/13 11:33:26 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/13 11:50:27 by dcresce          ###   ########.ch       */
+/*   Updated: 2026/08/13 13:34:19 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	FormattedPrint(std::string text) {
 	if (text.length() >= 10)
 		std::cout << text.substr(0, 9) << ".|";
 	else
-		std::cout << std::setfill(' ') << std::setw(11 - text.length()) << text << '|';
+		std::cout << std::setfill(' ') << std::setw(10) << text << '|';
 }
 
 bool	IsOnlyDigits(const std::string &str) {

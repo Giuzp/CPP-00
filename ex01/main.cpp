@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcresce <dcresce@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/12 21:17:06 by dcresce           #+#    #+#             */
-/*   Updated: 2026/08/12 21:17:32 by dcresce          ###   ########.ch       */
+/*   Created: 2026/08/13 13:21:10 by dcresce           #+#    #+#             */
+/*   Updated: 2026/08/13 13:27:58 by dcresce          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 void	AddContact(PhoneBook *pb);
+bool	CheckNumber(const std::string &str);
 
 void	PrintContacts(PhoneBook pb) {
 	for (int i = 0; i < 8; i++) {
@@ -53,7 +54,20 @@ void	AddContact(PhoneBook *pb) {
 	std::string texts[5] = {"Name", "Surname", "Nickname", "Number", "Secret"};
 
 	for (int i = 0; i < 5; i++) {
-		std::cout << texts[i] << ": "; getline(std::cin, infos[i]);
+		while (infos[i] == "") {
+			std::cout << texts[i] << ": "; getline(std::cin, infos[i]);
+			if (i == 3 && infos[i] != "")
+				if (!CheckNumber(infos[i]))
+					infos[i] = "";
+		}
+		
 	}
 	(*pb).NewContact(infos[0], infos[1], infos[2], infos[3], infos[4]);
+}
+
+bool	CheckNumber(const std::string &str) {
+	if (str[0] != '+')
+		return (str.find_first_not_of("0123456789") == std::string::npos);
+	else
+		return (str.find_first_not_of("0123456789", 1) == std::string::npos);
 }
